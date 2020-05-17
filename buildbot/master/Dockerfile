@@ -1,10 +1,10 @@
 # Usage: Follow the steps in ../README.md.
 
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 
 RUN apt-get update ; apt-get -y upgrade ; apt-get -y autoclean
-RUN apt-get -y install git python-pip python-dev
-RUN pip install buildbot buildbot-slave
+RUN apt-get -y install git python3-pip python3-dev
+RUN pip3 install buildbot buildbot-slave
 
 # Configuration
 RUN adduser --disabled-password --gecos "Continuese Integration" master
